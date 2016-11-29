@@ -1,0 +1,9 @@
+c:\users\dom\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\roboty_mobilne_lab.exe.config
+c:\users\dom\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\roboty_mobilne_lab.exe
+c:\users\dom\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\roboty_mobilne_lab.pdb
+c:\users\dom\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\roboty_mobilne_lab.csprojResolveAssemblyReference.cache
+c:\users\dom\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+c:\users\dom\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\roboty_mobilne_lab.Properties.Resources.resources
+c:\users\dom\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\roboty_mobilne_lab.csproj.GenerateResource.Cache
+c:\users\dom\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\roboty_mobilne_lab.exe
+c:\users\dom\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\roboty_mobilne_lab.pdb
