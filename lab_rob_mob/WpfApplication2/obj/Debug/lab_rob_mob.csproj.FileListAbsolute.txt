@@ -1,0 +1,14 @@
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\lab_rob_mob.csprojResolveAssemblyReference.cache
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\MainWindow.g.cs
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\App.g.cs
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.cache
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.lref
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.exe.config
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.exe
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.pdb
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\MainWindow.baml
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.g.resources
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\lab_rob_mob.csproj.GenerateResource.Cache
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.exe
+c:\users\dom\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.pdb
