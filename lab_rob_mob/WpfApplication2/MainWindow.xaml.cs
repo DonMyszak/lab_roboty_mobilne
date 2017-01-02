@@ -19,6 +19,9 @@ using System.Threading;
 using System.Net;
 using System.Net.Sockets;
 using System.IO;
+using System.Timers;
+using System.Windows.Threading;
+
 
 namespace WpfApplication2
 {
@@ -27,12 +30,13 @@ namespace WpfApplication2
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        int pp;
         bool connect_button = false, klawiatura = false;
         TcpClient client;
         NetworkStream stream;
         Thread sThread;
-        public string ramka_wys, ramka_odb, adres, port;
+        public string ramka_wys, ramka_odb, aa, adres, port;
+        private System.Windows.Threading.DispatcherTimer timer;
 
         private void Disconnect_Click(object sender, RoutedEventArgs e)
         {
@@ -68,15 +72,17 @@ namespace WpfApplication2
 
         public void SendAndReceive()
         {
+            
             while (connect_button)
             {
                 stream = client.GetStream();
                 Byte[] data = System.Text.Encoding.ASCII.GetBytes(ramka_wys);
                 stream.Write(data, 0, data.Length);
-                Thread.Sleep(500);
                 data = new Byte[28];
                 Int32 bytes = stream.Read(data, 0, data.Length);
                 ramka_odb = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
+                AppendTextBox(ramka_odb);
+                Thread.Sleep(500);
             }
         }
 
@@ -88,7 +94,7 @@ namespace WpfApplication2
 
         public void textBox3_TextChanged(object sender, TextChangedEventArgs e)
         {
-            textBox3.Text = ramka_odb;
+
         }
 
         private void Klawiatura_Checked(object sender, RoutedEventArgs e)
@@ -106,6 +112,7 @@ namespace WpfApplication2
             {
                 ramka_wys = "[015050]";
                 textBox4.Text = ramka_wys;
+           //     textBox3.Text = aa;
             }
 
             if (e.Key == Key.S && klawiatura)
@@ -135,11 +142,37 @@ namespace WpfApplication2
 
         }
 
+ //       public void OnTimedEvent(object source, ElapsedEventArgs e)
+//        {
+      //      textBox3.Text = aa;
+
+ //       }
 
         public MainWindow()
         {
+            
             InitializeComponent();
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += timer_Tick;
+            timer.Start();
             ramka_wys = "[000000]";
         }
+        public void AppendTextBox(string value)
+        {
+            if (Dispatcher.CheckAccess())
+            {
+                this.Dispatcher.Invoke(new Action<string>(AppendTextBox), new object[] { value });
+                return;
+            }
+            aa = value;
+        }
+
+        void timer_Tick(object sender, EventArgs e)
+        {
+                 textBox3.Text = aa;
+        }
+
     }
+
 }
