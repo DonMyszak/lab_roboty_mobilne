@@ -41,8 +41,8 @@ namespace WpfApplication2
         private void Disconnect_Click(object sender, RoutedEventArgs e)
         {
             connect_button = false;
-            stream.Close();
-            client.Close();
+            ramka_wys = "[010000]";
+            textBox_status.Text = "Rozłączony";
 
         }
 
@@ -52,6 +52,7 @@ namespace WpfApplication2
             connect_button = true;
             adres = textBox1.Text;
             ConnectToRobot();
+            textBox_status.Text = "Połączony";
             sThread = new Thread(new ThreadStart(SendAndReceive));
             sThread.Start();
 
@@ -62,7 +63,6 @@ namespace WpfApplication2
             try
             {
                 client.Connect(adres, 8000);
-                stream = client.GetStream();
             }
             catch (Exception ex)
             {
@@ -72,7 +72,8 @@ namespace WpfApplication2
 
         public void SendAndReceive()
         {
-            
+
+
             while (connect_button)
             {
                 stream = client.GetStream();
@@ -82,7 +83,13 @@ namespace WpfApplication2
                 Int32 bytes = stream.Read(data, 0, data.Length);
                 ramka_odb = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
                 AppendTextBox(ramka_odb);
-                Thread.Sleep(500);
+                Thread.Sleep(250);
+            }
+            if (!connect_button)
+            {
+                stream.Close();
+                client.Close();
+
             }
         }
 
@@ -90,6 +97,7 @@ namespace WpfApplication2
         {
             klawiatura = false;
             ramka_wys = "[010000]";
+            textBox4.Text = ramka_wys;
         }
 
         public void textBox3_TextChanged(object sender, TextChangedEventArgs e)
@@ -102,6 +110,16 @@ namespace WpfApplication2
             klawiatura = true;
         }
 
+        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
         private void Grid_KeyDown(object sender, KeyEventArgs e)
         {
         }
@@ -110,26 +128,25 @@ namespace WpfApplication2
         {
             if (e.Key == Key.W && klawiatura)
             {
-                ramka_wys = "[015050]";
+                ramka_wys = "[011515]";
                 textBox4.Text = ramka_wys;
-           //     textBox3.Text = aa;
             }
 
             if (e.Key == Key.S && klawiatura)
             {
-                ramka_wys = "[018080]";
+                ramka_wys = "[01E6E6]";
                 textBox4.Text = ramka_wys;
             }
 
             if (e.Key == Key.A && klawiatura)
             {
-                ramka_wys = "[010050]";
+                ramka_wys = "[010015]";
                 textBox4.Text = ramka_wys;
             }
 
             if (e.Key == Key.D && klawiatura)
             {
-                ramka_wys = "[015000]";
+                ramka_wys = "[011500]";
                 textBox4.Text = ramka_wys;
 
             }
@@ -142,11 +159,6 @@ namespace WpfApplication2
 
         }
 
- //       public void OnTimedEvent(object source, ElapsedEventArgs e)
-//        {
-      //      textBox3.Text = aa;
-
- //       }
 
         public MainWindow()
         {
@@ -156,7 +168,7 @@ namespace WpfApplication2
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += timer_Tick;
             timer.Start();
-            ramka_wys = "[000000]";
+            ramka_wys = "[010000]";
         }
         public void AppendTextBox(string value)
         {

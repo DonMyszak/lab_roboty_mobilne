@@ -5,26 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" KeyDown="Window_KeyDown">
-    <Grid KeyDown="Grid_KeyDown">
+        Title="MainWindow" Height="332.427" Width="603" KeyDown="Window_KeyDown">
+    <Grid KeyDown="Grid_KeyDown" Margin="0,0,-8,-1">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="248*"/>
-            <ColumnDefinition Width="269*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="172*"/>
         </Grid.ColumnDefinitions>
-        <Grid Margin="10,7,243,91" Grid.ColumnSpan="2">
-            <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="0,26,0,0" TextWrapping="Wrap" Text="192.168.1.103" VerticalAlignment="Top" Width="120"/>
+        <Grid Margin="2,10,205,88" Grid.Column="1">
+            <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="0,26,0,0" TextWrapping="Wrap" Text="192.168.2.34" VerticalAlignment="Top" Width="120" TextChanged="textBox1_TextChanged"/>
             <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="0,71,0,0" TextWrapping="Wrap" Text="8000" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="0,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBox3_TextChanged" IsReadOnly="True"/>
-            <Button x:Name="Connect" Content="Connect" HorizontalAlignment="Left" Margin="156,26,0,0" VerticalAlignment="Top" Width="75" Click="Connect_Click"/>
-            <Button x:Name="Disconnect" Content="Disconnect" HorizontalAlignment="Left" Margin="156,71,0,0" VerticalAlignment="Top" Width="75" Click="Disconnect_Click"/>
+            <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="0,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" TextChanged="textBox3_TextChanged" IsReadOnly="True"/>
+            <Button x:Name="Connect" Content="Connect" HorizontalAlignment="Left" Margin="137,29,0,0" VerticalAlignment="Top" Width="75" Click="Connect_Click"/>
+            <Button x:Name="Disconnect" Content="Disconnect" HorizontalAlignment="Left" Margin="137,74,0,0" VerticalAlignment="Top" Width="75" Click="Disconnect_Click" RenderTransformOrigin="1.2,-0.409"/>
             <Label x:Name="label" Content="IP:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy" Content="Port:" HorizontalAlignment="Left" Margin="0,49,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.105,7.085"/>
             <Label x:Name="label_Copy1" Content="Ramka odebrana:" HorizontalAlignment="Left" Margin="0,94,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.105,7.085"/>
-            <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" Margin="0,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,3.333" IsReadOnly="True"/>
+            <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" Margin="0,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" RenderTransformOrigin="0.5,3.333" IsReadOnly="True"/>
             <Label x:Name="label_Copy2" Content="Ramka wysłana:" HorizontalAlignment="Left" Margin="0,143,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.105,7.085"/>
+            <Image x:Name="image"  HorizontalAlignment="Left" Height="216" Margin="256,10,-189,-22" VerticalAlignment="Top" Width="319" Source="G:\lab_roboty_mobilne_final\lab_rob_mob\WpfApplication2\Resources\lab_rob_mob_instr.bmp"/>
 
         </Grid>
-        <CheckBox x:Name="Klawiatura" Content="Klawiatura" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.484,0.511" Checked="Klawiatura_Checked" Unchecked="Klawiatura_Unchecked"/>
+        <CheckBox x:Name="Klawiatura" Content="Klawiatura" HorizontalAlignment="Left" Margin="2,216,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.712,-0.736" Checked="Klawiatura_Checked" Unchecked="Klawiatura_Unchecked" Grid.Column="1" Height="15" Width="75"/>
+        <TextBox x:Name="textBox_status" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="55,247,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="textBox_TextChanged"/>
+        <Label x:Name="label1" Content="Status:" Grid.Column="1" HorizontalAlignment="Left" Margin="0,244,0,0" VerticalAlignment="Top" Width="50"/>
 
     </Grid>
 </Window>

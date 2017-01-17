@@ -7,3 +7,6 @@ c:\users\dom\documents\visual studio 2015\Projects\WindowsFormsApplication2\Wind
 c:\users\dom\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\roboty_mobilne_lab.csproj.GenerateResource.Cache
 c:\users\dom\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\roboty_mobilne_lab.exe
 c:\users\dom\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\roboty_mobilne_lab.pdb
+C:\Users\Student\Desktop\lab_roboty_mobilne-master\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\roboty_mobilne_lab.exe.config
+C:\Users\Student\Desktop\lab_roboty_mobilne-master\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\roboty_mobilne_lab.exe
+C:\Users\Student\Desktop\lab_roboty_mobilne-master\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\roboty_mobilne_lab.pdb
